@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class LostLegs : MonoBehaviour
+public class DestroyOnCollisionWithPlayer : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {

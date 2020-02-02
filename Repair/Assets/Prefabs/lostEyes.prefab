@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -164146712239433925}
   - component: {fileID: -6511737361500781481}
   - component: {fileID: -3125416108645670880}
+  - component: {fileID: -5291538023691208807}
   m_Layer: 0
   m_Name: lostEyes
   m_TagString: EyeActivator
@@ -143,3 +144,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5291538023691208807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695054019257207088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9a0c1308c414cb9a4a65d2cfb8a1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

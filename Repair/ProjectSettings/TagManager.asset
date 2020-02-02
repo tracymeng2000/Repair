@@ -12,6 +12,7 @@ TagManager:
   - SeesawBoundary
   - Balloon
   - HandActivator
+  - EnableMove
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Balloon
   - 
   - 
   - 

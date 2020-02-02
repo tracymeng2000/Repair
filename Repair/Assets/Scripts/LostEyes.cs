@@ -16,7 +16,6 @@ public class LostEyes : MonoBehaviour
     {
         if (collision.gameObject.tag == Constants.PLAYER)
         {
-            Destroy(gameObject);
             Destroy(GameObject.FindGameObjectWithTag(Constants.BLUR).gameObject);
             Destroy(GameObject.FindGameObjectWithTag(Constants.RIGHT_BOUNDARY).gameObject);
         }
