@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7821321938766711894}
   - component: {fileID: 7821321938766711893}
+  - component: {fileID: 4114471662268240260}
+  - component: {fileID: 2830152479303124536}
   m_Layer: 8
   m_Name: Cloud
   m_TagString: Untagged
@@ -81,3 +83,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &4114471662268240260
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821321938766711891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.034876104, y: -0.09765512}
+  m_Size: {x: 3.8302503, y: 0.6356372}
+  m_Direction: 1
+--- !u!114 &2830152479303124536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821321938766711891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542e79373ecc96544946238341a57f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: {x: 0, y: 0}
+  duration: 0
+  ac:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
