@@ -9,7 +9,6 @@ public class LostLegs : MonoBehaviour
         if (collision.gameObject.tag == Constants.PLAYER)
         {
             Destroy(gameObject);
-            Destroy(GameObject.FindGameObjectWithTag(Constants.SEESAW_BOUNDARY).gameObject);
         }
     }
 }
