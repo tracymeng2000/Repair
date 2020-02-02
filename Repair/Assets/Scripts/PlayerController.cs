@@ -7,28 +7,28 @@ public class PlayerController : MonoBehaviour
     public float speed, jumpHeight;
     public LayerMask groundLayers;
     private Rigidbody2D m_rb;
-	private Vector2 DirInput;
+    private Vector2 DirInput;
     private bool disableMovement;
 
     private HashSet<Skill> skillSet;
 
     void Start()
-	{
+    {
         //initialize skills and bodyParts dictionary
         skillSet = new HashSet<Skill>();
         disableMovement = false;
         //create reference to rb
-		m_rb = GetComponent<Rigidbody2D>();
-	}
-    
-	void Update()
- 	{
+        m_rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
         if (!disableMovement)
         {
             MoveCharacter();
         }
-	}
-    
+    }
+
 
     //Moving Logic
 
@@ -134,17 +134,14 @@ public class PlayerController : MonoBehaviour
                     m_rb.velocity = new Vector2(2, 0);
                 }
                 break;
+            case Constants.ENABLE_MOVE:
+                m_rb.velocity = Vector2.zero;
+                m_rb.gravityScale = 1.0f;
+                disableMovement = false;
+                break;
             default:
                 //do nothing
                 break;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == Constants.ENABLE_MOVE)
-        {
-            disableMovement = false;
         }
     }
 }
