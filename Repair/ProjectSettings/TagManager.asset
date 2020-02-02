@@ -10,6 +10,7 @@ TagManager:
   - Blur
   - RightBoundary
   - SeesawBoundary
+  - Balloon
   layers:
   - Default
   - TransparentFX

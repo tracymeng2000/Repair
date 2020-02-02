@@ -126,8 +126,8 @@ public class PlayerController : MonoBehaviour
                 activateHand();
                 break;
             case Constants.BALLOON:
-                //m_rb.gravityScale = 0.0f;
-                //m_rb.AddForce(Vector2.left * 500f);
+                m_rb.gravityScale = 0.0f;
+                m_rb.AddForce(Vector2.right * 500f);
                 break;
             default:
                 //do nothing
