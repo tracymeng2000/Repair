@@ -106,10 +106,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void instantiateEyes()
-    {
-
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
