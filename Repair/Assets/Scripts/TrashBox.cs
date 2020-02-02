@@ -5,19 +5,19 @@ using UnityEngine;
 public class TrashBox : MonoBehaviour
 {
     bool collided;
-
+    public GameObject lostEyes;
     public void Start()
     {
         collided = false;
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collided && collision.gameObject.tag == Constants.PLAYER)
         {
             collided = true;
-            GameObject eyeActObj = GameObject.FindGameObjectWithTag(Constants.EYE_ACTIVATOR);
-            if (eyeActObj) eyeActObj.SetActive(true);
+            Instantiate(lostEyes, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
+            lostEyes.tag = Constants.EYE_ACTIVATOR;
         }
     }
 }
