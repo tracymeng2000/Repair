@@ -7,7 +7,7 @@ public class BalloonMaker : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("makeNewBalloon", 0f, 5.0f);
+        InvokeRepeating("makeNewBalloon", 0f, 10.0f);
     }
 
     public void makeNewBalloon()
