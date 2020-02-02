@@ -9,7 +9,7 @@ public class LostEyes : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector2.left * 500f);
+        rb.AddForce(Vector2.right * 500f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
