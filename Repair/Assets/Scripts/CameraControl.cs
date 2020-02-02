@@ -6,9 +6,9 @@ public class CameraControl : MonoBehaviour
 {
     public Transform player;
     public float fromPlayerZ, fromPlayerY;
-
+    public bool followPlayer;
     void Update()
     {
-        transform.position = new Vector3(player.position.x, fromPlayerY, fromPlayerZ);
+        transform.position = new Vector3(player.position.x, followPlayer? player.position.y + 2f: fromPlayerY, fromPlayerZ);
     }
 }

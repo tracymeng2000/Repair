@@ -9,7 +9,7 @@ TagManager:
   - EyeActivator
   - Blur
   - RightBoundary
-  - SeasawBoundary
+  - SeesawBoundary
   layers:
   - Default
   - TransparentFX
