@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayers;
     private Rigidbody2D m_rb;
 	private Vector2 DirInput;
+    private bool disableMovement;
 
     private HashSet<Skill> skillSet;
 
@@ -15,14 +16,17 @@ public class PlayerController : MonoBehaviour
 	{
         //initialize skills and bodyParts dictionary
         skillSet = new HashSet<Skill>();
-
+        disableMovement = false;
         //create reference to rb
 		m_rb = GetComponent<Rigidbody2D>();
 	}
     
 	void Update()
  	{
-        MoveCharacter();
+        if (!disableMovement)
+        {
+            MoveCharacter();
+        }
 	}
     
 
@@ -100,6 +104,7 @@ public class PlayerController : MonoBehaviour
         GameObject handObj = transform.Find(Constants.HAND).gameObject;
         if (handObj)
         {
+            print("Here");
             handObj.SetActive(true);
             addSkill(Skill.Grab);
         }
@@ -124,13 +129,22 @@ public class PlayerController : MonoBehaviour
             case Constants.BALLOON:
                 if (hasSkill(Skill.Grab))
                 {
+                    disableMovement = true;
                     m_rb.gravityScale = 0.0f;
-                    m_rb.AddForce(Vector2.right * 500f);
+                    m_rb.velocity = new Vector2(2, 0);
                 }
                 break;
             default:
                 //do nothing
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == Constants.ENABLE_MOVE)
+        {
+            disableMovement = false;
         }
     }
 }
