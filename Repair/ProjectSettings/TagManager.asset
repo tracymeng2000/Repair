@@ -11,6 +11,7 @@ TagManager:
   - RightBoundary
   - SeesawBoundary
   - Balloon
+  - HandActivator
   layers:
   - Default
   - TransparentFX
