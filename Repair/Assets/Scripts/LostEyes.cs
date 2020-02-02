@@ -18,6 +18,7 @@ public class LostEyes : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(GameObject.FindGameObjectWithTag(Constants.BLUR).gameObject);
+            Destroy(GameObject.FindGameObjectWithTag(Constants.RIGHT_BOUNDARY).gameObject);
         }
     }
 }

@@ -13,5 +13,6 @@ static public class Constants
     public const string TRASH_BOX = "TrashBox";
     public const string PLAYER = "Player";
     public const string BLUR = "Blur";
+    public const string RIGHT_BOUNDARY = "RightBoundary";
     public const float GROUND_DISTANCE = 1.2f;
 }

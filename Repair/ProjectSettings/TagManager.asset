@@ -8,6 +8,7 @@ TagManager:
   - LegActivator
   - EyeActivator
   - Blur
+  - RightBoundary
   layers:
   - Default
   - TransparentFX
