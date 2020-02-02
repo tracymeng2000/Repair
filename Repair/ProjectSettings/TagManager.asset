@@ -7,6 +7,7 @@ TagManager:
   - ground
   - LegActivator
   - EyeActivator
+  - Blur
   layers:
   - Default
   - TransparentFX
